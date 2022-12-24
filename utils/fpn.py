@@ -3,6 +3,8 @@ Custom tweak to fit use cases
 '''
 import torch.nn as nn
 import torch.nn.functional as F
+from torch.autograd import Variable
+import torch
 
 
 class Bottleneck(nn.Module):
@@ -73,7 +75,7 @@ class FPN(nn.Module):
 
     def _upsample_add(self, x, y):
         _,_,H,W = y.size()
-        return F.upsample(x, size=(H,W), mode='bilinear') + y
+        return F.interpolate(x, size=(H,W), mode='bilinear') + y
 
     def forward(self, x):
         # Bottom-up
@@ -91,3 +93,9 @@ class FPN(nn.Module):
 
 def FPN101():
     return FPN(Bottleneck, [2,4,23,3])
+
+if __name__ == "__main__":
+    net = FPN101()
+    output = net(Variable(torch.randn(1, 1, 28, 28)))
+    for layer in output:
+        print(layer.shape)
