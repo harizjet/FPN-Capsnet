@@ -6,6 +6,11 @@ from torchvision.datasets.mnist import MNIST
 
 
 def augmentation(x, not_batch=True, max_shift=2):
+    """
+    Example:
+    $ t = torch.rand(1, 1, 28, 28)
+    $ y = augmentation(t)
+    """
     if not_batch:
         height, width = x.size()
     else:
@@ -32,10 +37,3 @@ def get_iterator(mode, batch_size):
     tensor_dataset = tnt.dataset.TensorDataset([data, labels])
 
     return tensor_dataset.parallel(batch_size=batch_size, num_workers=4, shuffle=mode)
-
-
-if __name__ == "__main__":
-    t = torch.rand(1, 1, 28, 28)
-    print(t)
-    y = augmentation(t)
-    print(y)

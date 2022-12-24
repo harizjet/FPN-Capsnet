@@ -92,10 +92,9 @@ class FPN(nn.Module):
 
 
 def FPN101():
+    """
+    Example:
+    $ net = FPN101()
+    $ output = net(Variable(torch.randn(1, 1, 28, 28)))
+    """
     return FPN(Bottleneck, [2,4,23,3])
-
-if __name__ == "__main__":
-    net = FPN101()
-    output = net(Variable(torch.randn(1, 1, 28, 28)))
-    for layer in output:
-        print(layer.shape)
