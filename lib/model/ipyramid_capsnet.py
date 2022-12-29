@@ -5,8 +5,8 @@ import torch
 import torch.nn.functional as F
 from torch import nn
 
-from utils.capsule import CapsuleLayer
-from utils.ipyramid import ImagePyramid
+from lib.model.capsule import CapsuleLayer
+from lib.model.ipyramid import ImagePyramid
 from utils import batch_apply
 
 

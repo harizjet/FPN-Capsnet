@@ -3,7 +3,7 @@ import torch.nn.functional as F
 from torch import nn
 from torch.autograd import Variable
 
-from utils.capsule import CapsuleLayer
+from lib.model.capsule import CapsuleLayer
 
 
 class CapsuleNet(nn.Module):
