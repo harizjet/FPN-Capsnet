@@ -1,10 +1,8 @@
 '''
-Custom tweak to fit use cases
+Todo: Tweak hyperparameter to really represent pyramid features for MNIST
 '''
 import torch.nn as nn
 import torch.nn.functional as F
-from torch.autograd import Variable
-import torch
 
 
 class Bottleneck(nn.Module):

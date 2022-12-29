@@ -1,3 +1,6 @@
+'''
+Todo: Tweak hyperparameter to bridging between Image Pyramid Features and Capsnet
+'''
 import torch
 import torch.nn.functional as F
 from torch import nn
