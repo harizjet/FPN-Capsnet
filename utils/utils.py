@@ -28,12 +28,3 @@ def augmentation(x, not_batch=True, max_shift=2):
     else:
         shifted_image[:, :, source_height_slice, source_width_slice] = x[:, :, target_height_slice, target_width_slice]
     return shifted_image.float()
-
-
-def get_iterator(mode, batch_size):
-    dataset = MNIST(root='./data', train=mode, download=True)
-    data = getattr(dataset, 'train_data' if mode else 'test_data')
-    labels = getattr(dataset, 'train_labels' if mode else 'test_labels')
-    tensor_dataset = tnt.dataset.TensorDataset([data, labels])
-
-    return tensor_dataset.parallel(batch_size=batch_size, num_workers=4, shuffle=mode)
