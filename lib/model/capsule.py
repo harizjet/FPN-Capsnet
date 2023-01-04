@@ -11,10 +11,10 @@ class CapsuleLayer(nn.Module):
     $ digit_capsules = CapsuleLayer(num_capsules=10, num_route_nodes=32 * 6 * 6, in_channels=8, out_channels=16)
     """
     def __init__(self, num_capsules, num_route_nodes, in_channels, out_channels, kernel_size=None, stride=None,
-                 num_iterations=3, use_cuda=False):
+                 num_iterations=3, device=torch.device('cpu')):
         super(CapsuleLayer, self).__init__()
 
-        self.use_cuda = use_cuda
+        self.device = device
 
         self.num_route_nodes = num_route_nodes
         self.num_iterations = num_iterations
@@ -37,9 +37,7 @@ class CapsuleLayer(nn.Module):
     def forward(self, x):
         if self.num_route_nodes != -1:
             priors = x[None, :, :, None, :] @ self.route_weights[:, None, :, :, :]
-            logits = Variable(torch.zeros(*priors.size()))
-            if torch.cuda.is_available() and self.use_cuda:
-                logits = logits.cuda()
+            logits = Variable(torch.zeros(*priors.size())).to(self.device)
             for i in range(self.num_iterations):
                 probs = F.softmax(logits, dim=2)
                 outputs = self.squash((probs * priors).sum(dim=2, keepdim=True))

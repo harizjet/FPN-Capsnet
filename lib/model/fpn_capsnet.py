@@ -41,10 +41,10 @@ class FPNCapsuleNet(nn.Module):
     Example:
     $ model = FPNCapsuleNet()
     """
-    def __init__(self, block, num_blocks, use_cuda=False):
+    def __init__(self, block, num_blocks, device=torch.device('cpu')):
         super(FPNCapsuleNet, self).__init__()
 
-        self.user_cuda = use_cuda
+        self.device = device
 
         self.in_planes = 256
 
@@ -68,21 +68,21 @@ class FPNCapsuleNet(nn.Module):
 
         # Capsule for pipe1
         self.primary_capsules1 = CapsuleLayer(num_capsules=8, num_route_nodes=-1, in_channels=256, out_channels=32,
-                                             kernel_size=9, stride=2)
+                                             kernel_size=9, stride=2, device=self.device)
         self.digit_capsules1 = CapsuleLayer(num_capsules=10, num_route_nodes=32 * 6 * 6, in_channels=8,
-                                           out_channels=16)
+                                           out_channels=16, device=self.device)
 
         # Capsule for pipe2
         self.primary_capsules2 = CapsuleLayer(num_capsules=8, num_route_nodes=-1, in_channels=256, out_channels=32,
-                                             kernel_size=9, stride=2)
+                                             kernel_size=9, stride=2, device=self.device)
         self.digit_capsules2 = CapsuleLayer(num_capsules=10, num_route_nodes=32 * 6 * 6, in_channels=8,
-                                           out_channels=16)
+                                           out_channels=16, device=self.device)
 
         # Capsule for pipe3
         self.primary_capsules3 = CapsuleLayer(num_capsules=8, num_route_nodes=-1, in_channels=256, out_channels=32,
-                                             kernel_size=9, stride=2)
+                                             kernel_size=9, stride=2, device=self.device)
         self.digit_capsules3 = CapsuleLayer(num_capsules=10, num_route_nodes=32 * 6 * 6, in_channels=8,
-                                           out_channels=16)
+                                           out_channels=16, device=self.device)
 
     def _make_layer(self, block, planes, num_blocks, stride):
         strides = [stride] + [1]*(num_blocks-1)
@@ -137,10 +137,10 @@ class FPNCapsuleNet(nn.Module):
         return classes
 
 
-def FPN101CapsuleNet():
+def FPN101CapsuleNet(device=torch.device('cpu')):
     """
     Example:
     $ net = FPN101CapsuleNet()
     $ output = net(Variable(torch.randn(1, 1, 28, 28)))
     """
-    return FPNCapsuleNet(Bottleneck, [2,4,23,3])
+    return FPNCapsuleNet(Bottleneck, [2,4,23,3], device=device)

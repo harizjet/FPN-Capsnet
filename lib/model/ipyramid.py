@@ -2,6 +2,7 @@ import cv2
 import torch
 import numpy as np
 
+
 class ImagePyramid(object):
     """
     Extract Image pyramid using Gaussian and Laplacian
@@ -14,7 +15,14 @@ class ImagePyramid(object):
         x, y = sample.shape
         assert (x, y) == self.origin_shape
         
+        has_device = False
+
         if not isinstance(sample, np.ndarray):
+            device = sample.device
+            if device.type != 'cpu':
+                has_device = True
+                sample = sample.cpu()
+
             sample = sample.numpy()
             
         output = []
@@ -24,5 +32,9 @@ class ImagePyramid(object):
         for i in range(self.num_times):
             if i != 0:
                 based = cv2.pyrUp(based)
-            output.append(torch.from_numpy(based))
+            val = torch.from_numpy(based)
+            if has_device:
+                val = val.to(device)
+            output.append(val)
+
         return output

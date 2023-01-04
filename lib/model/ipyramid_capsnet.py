@@ -15,33 +15,33 @@ class IPyramidCapsuleNet(nn.Module):
     Example:
     $ model = IPyramidCapsuleNet()
     """
-    def __init__(self, use_cuda=False):
+    def __init__(self, device=torch.device('cpu')):
         super(IPyramidCapsuleNet, self).__init__()
 
-        self.use_cuda = use_cuda
+        self.device = device
 
         self.ipyramid = batch_apply.function(ImagePyramid(3, (28, 28)))
         
         # pipe 1 for p3
         self.conv1 = nn.Conv2d(in_channels=1, out_channels=256, kernel_size=3, stride=1)
         self.primary_capsules1 = CapsuleLayer(num_capsules=8, num_route_nodes=-1, in_channels=256, out_channels=32,
-                                             kernel_size=3, stride=2)
+                                             kernel_size=3, stride=2, device=self.device)
         self.digit_capsules1 = CapsuleLayer(num_capsules=10, num_route_nodes=128, in_channels=8,
-                                           out_channels=16)
+                                           out_channels=16, device=self.device)
 
         # pipe 2 for p2
         self.conv2 = nn.Conv2d(in_channels=1, out_channels=256, kernel_size=4, stride=1)
         self.primary_capsules2 = CapsuleLayer(num_capsules=8, num_route_nodes=-1, in_channels=256, out_channels=32,
-                                             kernel_size=4, stride=2)
+                                             kernel_size=4, stride=2, device=self.device)
         self.digit_capsules2 = CapsuleLayer(num_capsules=10, num_route_nodes=512, in_channels=8,
-                                           out_channels=16)
+                                           out_channels=16, device=self.device)
 
         # pipe 3 for p1
         self.conv3 = nn.Conv2d(in_channels=1, out_channels=256, kernel_size=9, stride=1)
         self.primary_capsules3 = CapsuleLayer(num_capsules=8, num_route_nodes=-1, in_channels=256, out_channels=32,
-                                             kernel_size=9, stride=2)
+                                             kernel_size=9, stride=2, device=self.device)
         self.digit_capsules3 = CapsuleLayer(num_capsules=10, num_route_nodes=32 * 6 * 6, in_channels=8,
-                                           out_channels=16)
+                                           out_channels=16, device=self.device)
 
     def forward(self, x):
         x = torch.squeeze(x, 1)
