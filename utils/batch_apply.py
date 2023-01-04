@@ -1,8 +1,10 @@
 import torch
 
+
 class function(object):
     """
     Wrapper to apply fx to batch sample
+    Can be use with DL pipeline
     """
     def __init__(self, fx: object):
         self.fx = fx

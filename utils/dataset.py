@@ -30,7 +30,7 @@ class MNISTdataset(Dataset):
         self.transform_y = transform_y
     
     def __len__(self):
-        return len(self.data)
+        return len(self.x)
 
     def __getitem__(self, idx):
         if not self.isTrain:

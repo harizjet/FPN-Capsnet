@@ -10,7 +10,6 @@ class augmentation(object):
     $ t = torch.rand(1, 1, 28, 28)
     $ y = transform_augmentation((28, 28))(t)
     """
-
     def __init__(self, image_size, max_shift=2, isBatch=False):
         assert isinstance(image_size, tuple)
         height, width = image_size
@@ -42,4 +41,4 @@ class toTensor(object):
     """
 
     def __call__(self, sample):
-        return torch.from_numpy(sample)
+        return torch.from_numpy(np.asarray(sample))

@@ -7,7 +7,6 @@ class CapsuleLoss(nn.Module):
     """
     Custom loss for capsule
     """
-
     def __init__(self):
         super(CapsuleLoss, self).__init__()
     
@@ -15,7 +14,7 @@ class CapsuleLoss(nn.Module):
         return "CapsuleLoss"
     
     def forward(self, y, ypred):
-        labels = torch.eye(10).index_select(dim=0, index=y)
+        labels = torch.eye(10).to(ypred.device).index_select(dim=0, index=y)
 
         left = F.relu(0.9 - ypred, inplace=True) ** 2
         right = F.relu(ypred - 0.1, inplace=True) ** 2
