@@ -53,7 +53,6 @@ class Engine(object):
         self.logger.addHandler(stdout_handler)
 
     def _stopLog(self):
-        self.logger.propagate = False
         self.logger.disabled = True
     
     def _getFolderName(self):
@@ -114,7 +113,6 @@ class Engine(object):
                 writer.writerow([i+1, self.loss[i]])
 
     def _saveModel(self):
-        torch.save(self.model.state_dict(), os.path.join(self.basedir, self.foldername, 'model_param.pt'))
         torch.save(self.model, os.path.join(self.basedir, self.foldername, 'model.pb'))
     
     def train(self):
@@ -182,3 +180,4 @@ class Engine(object):
         self._saveAccuracy()
         self._saveLoss()
         self._saveModel()
+        self._stopLog()
