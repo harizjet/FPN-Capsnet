@@ -38,7 +38,11 @@ class CrossEntropyLoss(nn.Module):
         return "CrossEntropyLoss"
     
     def forward(self, y, ypred):
-        ypred = torch.max(ypred, dim=-1).values
+        labels = torch.eye(10).to(ypred.device).index_select(dim=0, index=y)
 
-        return self.critique(y.float(), ypred)
+        loss = 0
+        for i in range(len(labels)):
+            loss += self.critique(labels[i].float(), ypred[i].float())
+
+        return loss
         
