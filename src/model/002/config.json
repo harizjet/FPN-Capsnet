@@ -1,0 +1,7 @@
+{
+      "epochs": 1,
+      "batch_size": 32,
+      "learning_rate": 0.0005,
+      "optimizer": "SGD (\nParameter Group 0\n    dampening: 0\n    differentiable: False\n    foreach: None\n    lr: 0.0005\n    maximize: False\n    momentum: 0\n    nesterov: False\n    weight_decay: 0.97\n)",
+      "criterion": "CapsuleLoss"
+}

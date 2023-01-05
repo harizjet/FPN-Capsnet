@@ -161,5 +161,3 @@ cython_debug/
 data/mnist/*.csv
 explore/*
 explore.ipynb
-src/model/*/*.pb
-src/model/*/*.pt
