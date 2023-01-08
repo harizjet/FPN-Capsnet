@@ -13,3 +13,6 @@ def accuracy(y, ypred):
             correct += 1
             
     return correct / N
+
+def sharpen():
+    pass
