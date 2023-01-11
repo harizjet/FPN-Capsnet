@@ -14,5 +14,18 @@ def accuracy(y, ypred):
             
     return correct / N
 
+def isValidModel(model, sample_X):
+    """
+    Check if the model is setup correctly
+    """
+    model.train(False)
+
+    try:
+        model(sample_X.to(model.device))
+        return True
+    except Exception as e:
+        print(e)
+        return False
+
 def sharpen():
     pass
