@@ -1,0 +1,224 @@
+[Thu, 12 Jan 2023 01:11:35] INFO :: START EPOCH - 1
+[Thu, 12 Jan 2023 01:11:35] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [   5,1116]   | LOSS: 74.4388   --  0.29s
+[Thu, 12 Jan 2023 01:11:36] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [  10,1116]   | LOSS: 71.2063   --  0.56s
+[Thu, 12 Jan 2023 01:11:36] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [  15,1116]   | LOSS: 69.7409   --  0.85s
+[Thu, 12 Jan 2023 01:11:36] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [  20,1116]   | LOSS: 68.6532   --  1.14s
+[Thu, 12 Jan 2023 01:11:36] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [  25,1116]   | LOSS: 67.3969   --  1.40s
+[Thu, 12 Jan 2023 01:11:37] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [  30,1116]   | LOSS: 66.9190   --  1.67s
+[Thu, 12 Jan 2023 01:11:37] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [  35,1116]   | LOSS: 65.9070   --  1.94s
+[Thu, 12 Jan 2023 01:11:37] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [  40,1116]   | LOSS: 64.3526   --  2.22s
+[Thu, 12 Jan 2023 01:11:38] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [  45,1116]   | LOSS: 65.9222   --  2.51s
+[Thu, 12 Jan 2023 01:11:38] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [  50,1116]   | LOSS: 64.5423   --  2.78s
+[Thu, 12 Jan 2023 01:11:38] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [  55,1116]   | LOSS: 64.4436   --  3.05s
+[Thu, 12 Jan 2023 01:11:38] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [  60,1116]   | LOSS: 63.5558   --  3.31s
+[Thu, 12 Jan 2023 01:11:39] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [  65,1116]   | LOSS: 64.9853   --  3.59s
+[Thu, 12 Jan 2023 01:11:39] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [  70,1116]   | LOSS: 64.2281   --  3.87s
+[Thu, 12 Jan 2023 01:11:39] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [  75,1116]   | LOSS: 63.5256   --  4.14s
+[Thu, 12 Jan 2023 01:11:39] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [  80,1116]   | LOSS: 63.4036   --  4.41s
+[Thu, 12 Jan 2023 01:11:40] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [  85,1116]   | LOSS: 62.6310   --  4.68s
+[Thu, 12 Jan 2023 01:11:40] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [  90,1116]   | LOSS: 62.5472   --  4.95s
+[Thu, 12 Jan 2023 01:11:40] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [  95,1116]   | LOSS: 63.1590   --  5.21s
+[Thu, 12 Jan 2023 01:11:41] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 100,1116]   | LOSS: 63.5830   --  5.48s
+[Thu, 12 Jan 2023 01:11:41] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 105,1116]   | LOSS: 62.0725   --  5.74s
+[Thu, 12 Jan 2023 01:11:41] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 110,1116]   | LOSS: 62.4290   --  6.01s
+[Thu, 12 Jan 2023 01:11:41] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 115,1116]   | LOSS: 62.0166   --  6.28s
+[Thu, 12 Jan 2023 01:11:42] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 120,1116]   | LOSS: 62.4266   --  6.55s
+[Thu, 12 Jan 2023 01:11:42] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 125,1116]   | LOSS: 62.4651   --  6.81s
+[Thu, 12 Jan 2023 01:11:42] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 130,1116]   | LOSS: 61.9312   --  7.08s
+[Thu, 12 Jan 2023 01:11:42] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 135,1116]   | LOSS: 61.1795   --  7.34s
+[Thu, 12 Jan 2023 01:11:43] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 140,1116]   | LOSS: 61.9948   --  7.63s
+[Thu, 12 Jan 2023 01:11:43] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 145,1116]   | LOSS: 62.3283   --  7.90s
+[Thu, 12 Jan 2023 01:11:43] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 150,1116]   | LOSS: 61.1606   --  8.18s
+[Thu, 12 Jan 2023 01:11:44] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 155,1116]   | LOSS: 61.4853   --  8.44s
+[Thu, 12 Jan 2023 01:11:44] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 160,1116]   | LOSS: 61.0654   --  8.72s
+[Thu, 12 Jan 2023 01:11:44] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 165,1116]   | LOSS: 61.6372   --  8.98s
+[Thu, 12 Jan 2023 01:11:44] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 170,1116]   | LOSS: 60.8248   --  9.24s
+[Thu, 12 Jan 2023 01:11:45] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 175,1116]   | LOSS: 61.5669   --  9.50s
+[Thu, 12 Jan 2023 01:11:45] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 180,1116]   | LOSS: 61.0409   --  9.76s
+[Thu, 12 Jan 2023 01:11:45] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 185,1116]   | LOSS: 61.0837   --  10.03s
+[Thu, 12 Jan 2023 01:11:45] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 190,1116]   | LOSS: 61.1676   --  10.30s
+[Thu, 12 Jan 2023 01:11:46] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 195,1116]   | LOSS: 60.6282   --  10.58s
+[Thu, 12 Jan 2023 01:11:46] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 200,1116]   | LOSS: 61.3175   --  10.85s
+[Thu, 12 Jan 2023 01:11:46] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 205,1116]   | LOSS: 60.8273   --  11.13s
+[Thu, 12 Jan 2023 01:11:46] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 210,1116]   | LOSS: 60.7787   --  11.40s
+[Thu, 12 Jan 2023 01:11:47] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 215,1116]   | LOSS: 61.2260   --  11.67s
+[Thu, 12 Jan 2023 01:11:47] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 220,1116]   | LOSS: 61.0952   --  11.94s
+[Thu, 12 Jan 2023 01:11:47] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 225,1116]   | LOSS: 61.2307   --  12.21s
+[Thu, 12 Jan 2023 01:11:48] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 230,1116]   | LOSS: 61.0697   --  12.49s
+[Thu, 12 Jan 2023 01:11:48] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 235,1116]   | LOSS: 61.0472   --  12.75s
+[Thu, 12 Jan 2023 01:11:48] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 240,1116]   | LOSS: 60.5520   --  13.03s
+[Thu, 12 Jan 2023 01:11:48] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 245,1116]   | LOSS: 61.2000   --  13.28s
+[Thu, 12 Jan 2023 01:11:49] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 250,1116]   | LOSS: 60.7642   --  13.54s
+[Thu, 12 Jan 2023 01:11:49] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 255,1116]   | LOSS: 61.1884   --  13.80s
+[Thu, 12 Jan 2023 01:11:49] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 260,1116]   | LOSS: 60.7241   --  14.11s
+[Thu, 12 Jan 2023 01:11:49] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 265,1116]   | LOSS: 60.6841   --  14.40s
+[Thu, 12 Jan 2023 01:11:50] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 270,1116]   | LOSS: 59.9745   --  14.68s
+[Thu, 12 Jan 2023 01:11:50] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 275,1116]   | LOSS: 60.8124   --  14.96s
+[Thu, 12 Jan 2023 01:11:50] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 280,1116]   | LOSS: 60.6972   --  15.23s
+[Thu, 12 Jan 2023 01:11:51] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 285,1116]   | LOSS: 60.4212   --  15.50s
+[Thu, 12 Jan 2023 01:11:51] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 290,1116]   | LOSS: 60.5867   --  15.76s
+[Thu, 12 Jan 2023 01:11:51] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 295,1116]   | LOSS: 59.5853   --  16.05s
+[Thu, 12 Jan 2023 01:11:51] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 300,1116]   | LOSS: 60.8939   --  16.31s
+[Thu, 12 Jan 2023 01:11:52] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 305,1116]   | LOSS: 60.7621   --  16.57s
+[Thu, 12 Jan 2023 01:11:52] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 310,1116]   | LOSS: 60.8470   --  16.84s
+[Thu, 12 Jan 2023 01:11:52] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 315,1116]   | LOSS: 60.0269   --  17.10s
+[Thu, 12 Jan 2023 01:11:52] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 320,1116]   | LOSS: 60.5553   --  17.36s
+[Thu, 12 Jan 2023 01:11:53] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 325,1116]   | LOSS: 60.4559   --  17.62s
+[Thu, 12 Jan 2023 01:11:53] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 330,1116]   | LOSS: 59.3480   --  17.88s
+[Thu, 12 Jan 2023 01:11:53] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 335,1116]   | LOSS: 60.3295   --  18.16s
+[Thu, 12 Jan 2023 01:11:54] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 340,1116]   | LOSS: 60.5951   --  18.43s
+[Thu, 12 Jan 2023 01:11:54] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 345,1116]   | LOSS: 59.9295   --  18.70s
+[Thu, 12 Jan 2023 01:11:54] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 350,1116]   | LOSS: 59.9101   --  18.96s
+[Thu, 12 Jan 2023 01:11:54] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 355,1116]   | LOSS: 59.5386   --  19.22s
+[Thu, 12 Jan 2023 01:11:55] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 360,1116]   | LOSS: 59.9893   --  19.48s
+[Thu, 12 Jan 2023 01:11:55] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 365,1116]   | LOSS: 60.3459   --  19.75s
+[Thu, 12 Jan 2023 01:11:55] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 370,1116]   | LOSS: 60.8482   --  20.02s
+[Thu, 12 Jan 2023 01:11:55] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 375,1116]   | LOSS: 59.8896   --  20.28s
+[Thu, 12 Jan 2023 01:11:56] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 380,1116]   | LOSS: 59.9220   --  20.55s
+[Thu, 12 Jan 2023 01:11:56] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 385,1116]   | LOSS: 60.4711   --  20.82s
+[Thu, 12 Jan 2023 01:11:56] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 390,1116]   | LOSS: 60.0985   --  21.09s
+[Thu, 12 Jan 2023 01:11:56] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 395,1116]   | LOSS: 60.0852   --  21.39s
+[Thu, 12 Jan 2023 01:11:57] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 400,1116]   | LOSS: 60.4136   --  21.65s
+[Thu, 12 Jan 2023 01:11:57] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 405,1116]   | LOSS: 60.3522   --  21.91s
+[Thu, 12 Jan 2023 01:11:57] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 410,1116]   | LOSS: 59.4135   --  22.19s
+[Thu, 12 Jan 2023 01:11:58] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 415,1116]   | LOSS: 60.0438   --  22.45s
+[Thu, 12 Jan 2023 01:11:58] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 420,1116]   | LOSS: 59.7239   --  22.73s
+[Thu, 12 Jan 2023 01:11:58] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 425,1116]   | LOSS: 59.9065   --  23.00s
+[Thu, 12 Jan 2023 01:11:58] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 430,1116]   | LOSS: 59.8753   --  23.26s
+[Thu, 12 Jan 2023 01:11:59] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 435,1116]   | LOSS: 59.5824   --  23.53s
+[Thu, 12 Jan 2023 01:11:59] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 440,1116]   | LOSS: 60.3277   --  23.79s
+[Thu, 12 Jan 2023 01:11:59] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 445,1116]   | LOSS: 59.6157   --  24.06s
+[Thu, 12 Jan 2023 01:11:59] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 450,1116]   | LOSS: 59.7393   --  24.32s
+[Thu, 12 Jan 2023 01:12:00] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 455,1116]   | LOSS: 60.1265   --  24.59s
+[Thu, 12 Jan 2023 01:12:00] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 460,1116]   | LOSS: 59.5301   --  24.85s
+[Thu, 12 Jan 2023 01:12:00] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 465,1116]   | LOSS: 59.6558   --  25.11s
+[Thu, 12 Jan 2023 01:12:00] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 470,1116]   | LOSS: 60.3668   --  25.38s
+[Thu, 12 Jan 2023 01:12:01] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 475,1116]   | LOSS: 60.3347   --  25.64s
+[Thu, 12 Jan 2023 01:12:01] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 480,1116]   | LOSS: 59.7217   --  25.90s
+[Thu, 12 Jan 2023 01:12:01] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 485,1116]   | LOSS: 59.6446   --  26.17s
+[Thu, 12 Jan 2023 01:12:02] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 490,1116]   | LOSS: 59.9411   --  26.43s
+[Thu, 12 Jan 2023 01:12:02] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 495,1116]   | LOSS: 60.0322   --  26.69s
+[Thu, 12 Jan 2023 01:12:02] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 500,1116]   | LOSS: 59.2228   --  26.95s
+[Thu, 12 Jan 2023 01:12:02] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 505,1116]   | LOSS: 59.5181   --  27.22s
+[Thu, 12 Jan 2023 01:12:03] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 510,1116]   | LOSS: 59.2414   --  27.48s
+[Thu, 12 Jan 2023 01:12:03] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 515,1116]   | LOSS: 59.5717   --  27.75s
+[Thu, 12 Jan 2023 01:12:03] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 520,1116]   | LOSS: 59.5998   --  28.01s
+[Thu, 12 Jan 2023 01:12:03] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 525,1116]   | LOSS: 59.8852   --  28.27s
+[Thu, 12 Jan 2023 01:12:04] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 530,1116]   | LOSS: 59.4415   --  28.53s
+[Thu, 12 Jan 2023 01:12:04] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 535,1116]   | LOSS: 59.7056   --  28.79s
+[Thu, 12 Jan 2023 01:12:04] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 540,1116]   | LOSS: 59.6764   --  29.06s
+[Thu, 12 Jan 2023 01:12:04] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 545,1116]   | LOSS: 60.0859   --  29.31s
+[Thu, 12 Jan 2023 01:12:05] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 550,1116]   | LOSS: 59.3132   --  29.57s
+[Thu, 12 Jan 2023 01:12:05] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 555,1116]   | LOSS: 59.9890   --  29.83s
+[Thu, 12 Jan 2023 01:12:05] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 560,1116]   | LOSS: 59.7055   --  30.09s
+[Thu, 12 Jan 2023 01:12:05] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 565,1116]   | LOSS: 59.2247   --  30.35s
+[Thu, 12 Jan 2023 01:12:06] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 570,1116]   | LOSS: 59.4340   --  30.64s
+[Thu, 12 Jan 2023 01:12:06] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 575,1116]   | LOSS: 59.5004   --  30.90s
+[Thu, 12 Jan 2023 01:12:06] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 580,1116]   | LOSS: 59.1637   --  31.16s
+[Thu, 12 Jan 2023 01:12:07] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 585,1116]   | LOSS: 60.2362   --  31.43s
+[Thu, 12 Jan 2023 01:12:07] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 590,1116]   | LOSS: 59.7633   --  31.69s
+[Thu, 12 Jan 2023 01:12:07] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 595,1116]   | LOSS: 59.5106   --  31.95s
+[Thu, 12 Jan 2023 01:12:07] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 600,1116]   | LOSS: 59.9063   --  32.22s
+[Thu, 12 Jan 2023 01:12:08] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 605,1116]   | LOSS: 59.4103   --  32.50s
+[Thu, 12 Jan 2023 01:12:08] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 610,1116]   | LOSS: 59.7032   --  32.77s
+[Thu, 12 Jan 2023 01:12:08] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 615,1116]   | LOSS: 59.3808   --  33.06s
+[Thu, 12 Jan 2023 01:12:08] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 620,1116]   | LOSS: 59.7846   --  33.33s
+[Thu, 12 Jan 2023 01:12:09] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 625,1116]   | LOSS: 59.3219   --  33.59s
+[Thu, 12 Jan 2023 01:12:09] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 630,1116]   | LOSS: 59.7611   --  33.87s
+[Thu, 12 Jan 2023 01:12:09] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 635,1116]   | LOSS: 59.3106   --  34.13s
+[Thu, 12 Jan 2023 01:12:09] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 640,1116]   | LOSS: 59.2677   --  34.39s
+[Thu, 12 Jan 2023 01:12:10] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 645,1116]   | LOSS: 59.4832   --  34.65s
+[Thu, 12 Jan 2023 01:12:10] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 650,1116]   | LOSS: 59.1005   --  34.91s
+[Thu, 12 Jan 2023 01:12:10] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 655,1116]   | LOSS: 59.2279   --  35.17s
+[Thu, 12 Jan 2023 01:12:11] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 660,1116]   | LOSS: 59.5685   --  35.43s
+[Thu, 12 Jan 2023 01:12:11] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 665,1116]   | LOSS: 59.1628   --  35.69s
+[Thu, 12 Jan 2023 01:12:11] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 670,1116]   | LOSS: 59.8069   --  35.95s
+[Thu, 12 Jan 2023 01:12:11] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 675,1116]   | LOSS: 59.6106   --  36.22s
+[Thu, 12 Jan 2023 01:12:12] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 680,1116]   | LOSS: 59.1404   --  36.48s
+[Thu, 12 Jan 2023 01:12:12] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 685,1116]   | LOSS: 59.7826   --  36.74s
+[Thu, 12 Jan 2023 01:12:12] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 690,1116]   | LOSS: 59.8934   --  37.01s
+[Thu, 12 Jan 2023 01:12:12] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 695,1116]   | LOSS: 59.4279   --  37.27s
+[Thu, 12 Jan 2023 01:12:13] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 700,1116]   | LOSS: 59.4286   --  37.53s
+[Thu, 12 Jan 2023 01:12:13] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 705,1116]   | LOSS: 59.1077   --  37.79s
+[Thu, 12 Jan 2023 01:12:13] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 710,1116]   | LOSS: 59.8723   --  38.05s
+[Thu, 12 Jan 2023 01:12:13] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 715,1116]   | LOSS: 58.8931   --  38.31s
+[Thu, 12 Jan 2023 01:12:14] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 720,1116]   | LOSS: 58.9208   --  38.57s
+[Thu, 12 Jan 2023 01:12:14] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 725,1116]   | LOSS: 59.1995   --  38.82s
+[Thu, 12 Jan 2023 01:12:14] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 730,1116]   | LOSS: 59.6073   --  39.08s
+[Thu, 12 Jan 2023 01:12:14] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 735,1116]   | LOSS: 59.3124   --  39.35s
+[Thu, 12 Jan 2023 01:12:15] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 740,1116]   | LOSS: 59.4407   --  39.62s
+[Thu, 12 Jan 2023 01:12:15] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 745,1116]   | LOSS: 59.2092   --  39.88s
+[Thu, 12 Jan 2023 01:12:15] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 750,1116]   | LOSS: 59.6006   --  40.15s
+[Thu, 12 Jan 2023 01:12:16] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 755,1116]   | LOSS: 59.7916   --  40.42s
+[Thu, 12 Jan 2023 01:12:16] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 760,1116]   | LOSS: 59.5736   --  40.67s
+[Thu, 12 Jan 2023 01:12:16] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 765,1116]   | LOSS: 59.7107   --  40.94s
+[Thu, 12 Jan 2023 01:12:16] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 770,1116]   | LOSS: 59.0116   --  41.20s
+[Thu, 12 Jan 2023 01:12:17] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 775,1116]   | LOSS: 59.0877   --  41.47s
+[Thu, 12 Jan 2023 01:12:17] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 780,1116]   | LOSS: 59.7574   --  41.73s
+[Thu, 12 Jan 2023 01:12:17] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 785,1116]   | LOSS: 59.3378   --  41.99s
+[Thu, 12 Jan 2023 01:12:17] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 790,1116]   | LOSS: 59.1861   --  42.25s
+[Thu, 12 Jan 2023 01:12:18] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 795,1116]   | LOSS: 59.7693   --  42.51s
+[Thu, 12 Jan 2023 01:12:18] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 800,1116]   | LOSS: 59.2126   --  42.77s
+[Thu, 12 Jan 2023 01:12:18] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 805,1116]   | LOSS: 58.8938   --  43.03s
+[Thu, 12 Jan 2023 01:12:18] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 810,1116]   | LOSS: 59.6717   --  43.30s
+[Thu, 12 Jan 2023 01:12:19] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 815,1116]   | LOSS: 59.1526   --  43.55s
+[Thu, 12 Jan 2023 01:12:19] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 820,1116]   | LOSS: 58.7140   --  43.82s
+[Thu, 12 Jan 2023 01:12:19] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 825,1116]   | LOSS: 59.2471   --  44.08s
+[Thu, 12 Jan 2023 01:12:19] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 830,1116]   | LOSS: 58.9621   --  44.34s
+[Thu, 12 Jan 2023 01:12:20] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 835,1116]   | LOSS: 58.7037   --  44.60s
+[Thu, 12 Jan 2023 01:12:20] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 840,1116]   | LOSS: 58.9491   --  44.86s
+[Thu, 12 Jan 2023 01:12:20] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 845,1116]   | LOSS: 58.7917   --  45.13s
+[Thu, 12 Jan 2023 01:12:20] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 850,1116]   | LOSS: 58.9504   --  45.40s
+[Thu, 12 Jan 2023 01:12:21] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 855,1116]   | LOSS: 59.4291   --  45.67s
+[Thu, 12 Jan 2023 01:12:21] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 860,1116]   | LOSS: 58.9358   --  45.93s
+[Thu, 12 Jan 2023 01:12:21] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 865,1116]   | LOSS: 59.8987   --  46.19s
+[Thu, 12 Jan 2023 01:12:22] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 870,1116]   | LOSS: 59.8839   --  46.46s
+[Thu, 12 Jan 2023 01:12:22] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 875,1116]   | LOSS: 58.3961   --  46.71s
+[Thu, 12 Jan 2023 01:12:22] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 880,1116]   | LOSS: 58.6016   --  46.98s
+[Thu, 12 Jan 2023 01:12:22] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 885,1116]   | LOSS: 58.8439   --  47.27s
+[Thu, 12 Jan 2023 01:12:23] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 890,1116]   | LOSS: 59.2901   --  47.54s
+[Thu, 12 Jan 2023 01:12:23] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 895,1116]   | LOSS: 58.9545   --  47.81s
+[Thu, 12 Jan 2023 01:12:23] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 900,1116]   | LOSS: 59.2470   --  48.07s
+[Thu, 12 Jan 2023 01:12:23] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 905,1116]   | LOSS: 59.3228   --  48.33s
+[Thu, 12 Jan 2023 01:12:24] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 910,1116]   | LOSS: 59.3895   --  48.60s
+[Thu, 12 Jan 2023 01:12:24] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 915,1116]   | LOSS: 59.0271   --  48.86s
+[Thu, 12 Jan 2023 01:12:24] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 920,1116]   | LOSS: 58.8555   --  49.13s
+[Thu, 12 Jan 2023 01:12:24] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 925,1116]   | LOSS: 59.4625   --  49.40s
+[Thu, 12 Jan 2023 01:12:25] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 930,1116]   | LOSS: 59.5649   --  49.66s
+[Thu, 12 Jan 2023 01:12:25] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 935,1116]   | LOSS: 59.1898   --  49.93s
+[Thu, 12 Jan 2023 01:12:25] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 940,1116]   | LOSS: 59.5966   --  50.19s
+[Thu, 12 Jan 2023 01:12:26] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 945,1116]   | LOSS: 58.8008   --  50.47s
+[Thu, 12 Jan 2023 01:12:26] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 950,1116]   | LOSS: 58.9828   --  50.73s
+[Thu, 12 Jan 2023 01:12:26] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 955,1116]   | LOSS: 58.9243   --  51.01s
+[Thu, 12 Jan 2023 01:12:26] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 960,1116]   | LOSS: 59.0303   --  51.27s
+[Thu, 12 Jan 2023 01:12:27] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 965,1116]   | LOSS: 59.0509   --  51.54s
+[Thu, 12 Jan 2023 01:12:27] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 970,1116]   | LOSS: 59.7009   --  51.80s
+[Thu, 12 Jan 2023 01:12:27] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 975,1116]   | LOSS: 59.3613   --  52.07s
+[Thu, 12 Jan 2023 01:12:27] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 980,1116]   | LOSS: 59.1302   --  52.33s
+[Thu, 12 Jan 2023 01:12:28] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 985,1116]   | LOSS: 59.4761   --  52.61s
+[Thu, 12 Jan 2023 01:12:28] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 990,1116]   | LOSS: 58.4664   --  52.87s
+[Thu, 12 Jan 2023 01:12:28] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [ 995,1116]   | LOSS: 59.1342   --  53.13s
+[Thu, 12 Jan 2023 01:12:28] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [1000,1116]   | LOSS: 58.8737   --  53.40s
+[Thu, 12 Jan 2023 01:12:29] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [1005,1116]   | LOSS: 58.7557   --  53.66s
+[Thu, 12 Jan 2023 01:12:29] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [1010,1116]   | LOSS: 59.0741   --  53.93s
+[Thu, 12 Jan 2023 01:12:29] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [1015,1116]   | LOSS: 58.8806   --  54.19s
+[Thu, 12 Jan 2023 01:12:30] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [1020,1116]   | LOSS: 59.0336   --  54.45s
+[Thu, 12 Jan 2023 01:12:30] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [1025,1116]   | LOSS: 58.9078   --  54.72s
+[Thu, 12 Jan 2023 01:12:30] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [1030,1116]   | LOSS: 59.3047   --  54.99s
+[Thu, 12 Jan 2023 01:12:30] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [1035,1116]   | LOSS: 59.4397   --  55.26s
+[Thu, 12 Jan 2023 01:12:31] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [1040,1116]   | LOSS: 58.5334   --  55.52s
+[Thu, 12 Jan 2023 01:12:31] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [1045,1116]   | LOSS: 58.6064   --  55.79s
+[Thu, 12 Jan 2023 01:12:31] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [1050,1116]   | LOSS: 58.9121   --  56.05s
+[Thu, 12 Jan 2023 01:12:31] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [1055,1116]   | LOSS: 58.5416   --  56.32s
+[Thu, 12 Jan 2023 01:12:32] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [1060,1116]   | LOSS: 58.4668   --  56.59s
+[Thu, 12 Jan 2023 01:12:32] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [1065,1116]   | LOSS: 59.4242   --  56.86s
+[Thu, 12 Jan 2023 01:12:32] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [1070,1116]   | LOSS: 59.4142   --  57.11s
+[Thu, 12 Jan 2023 01:12:32] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [1075,1116]   | LOSS: 58.6217   --  57.37s
+[Thu, 12 Jan 2023 01:12:33] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [1080,1116]   | LOSS: 59.0044   --  57.63s
+[Thu, 12 Jan 2023 01:12:33] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [1085,1116]   | LOSS: 58.8213   --  57.89s
+[Thu, 12 Jan 2023 01:12:33] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [1090,1116]   | LOSS: 58.9072   --  58.15s
+[Thu, 12 Jan 2023 01:12:34] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [1095,1116]   | LOSS: 58.4865   --  58.42s
+[Thu, 12 Jan 2023 01:12:34] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [1100,1116]   | LOSS: 58.5517   --  58.68s
+[Thu, 12 Jan 2023 01:12:34] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [1105,1116]   | LOSS: 59.0057   --  58.94s
+[Thu, 12 Jan 2023 01:12:34] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [1110,1116]   | LOSS: 58.5072   --  59.21s
+[Thu, 12 Jan 2023 01:12:35] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [1115,1116]   | LOSS: 59.0379   --  59.47s
