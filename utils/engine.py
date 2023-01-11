@@ -86,6 +86,9 @@ class Engine(object):
         with open(os.path.join(self.basedir, self.foldername, 'summary.txt'), 'w+', encoding="utf-8") as f:
             f.write(str(summary(self.model)))
 
+        with open(os.path.join(self.basedir, self.foldername, 'detail.txt'), 'w+', encoding="utf-8") as f:
+            f.write(str(self.model))
+
     def _saveConfig(self):
         config = {}
 
