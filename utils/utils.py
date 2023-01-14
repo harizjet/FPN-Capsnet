@@ -23,8 +23,8 @@ def isValidModel(model, sample_X):
     try:
         model(sample_X.to(model.device))
         return True
-    except Exception as e:
-        print(e)
+    except Exception as error:
+        print(error)
         return False
 
 def sharpen():
