@@ -28,4 +28,13 @@ def isValidModel(model, sample_X):
         return False
 
 def sharpen():
+    """
+    Sharpening an images
+    """
+    pass
+
+def extractSIFT():
+    pass
+
+def extractSURF():
     pass
