@@ -143,4 +143,4 @@ def FPN101CapsuleNet(device=torch.device('cpu')):
     $ net = FPN101CapsuleNet()
     $ output = net(Variable(torch.randn(1, 1, 28, 28)))
     """
-    return FPNCapsuleNet(Bottleneck, [2,4,23,3], device=device)
+    return FPNCapsuleNet(Bottleneck, [2,2,], device=device)
