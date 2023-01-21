@@ -209,3 +209,4 @@
 [Sun, 22 Jan 2023 00:41:12] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [1040,1050]   | LOSS: 57.0660   --  36.04s
 [Sun, 22 Jan 2023 00:41:13] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [1045,1050]   | LOSS: 57.0391   --  36.22s
 [Sun, 22 Jan 2023 00:41:13] INFO :: EPOCH: [  1,  1]   | MINI-BATCH: [1050,1050]   | LOSS: 57.3244   --  36.39s
+[Sun, 22 Jan 2023 00:41:17] INFO :: EPOCH: [  1,  1]   | VAL-ACCURACY: 0.9912      | VAL-LOSS: 57.0719   --  41.15s
