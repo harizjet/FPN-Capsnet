@@ -1,4 +1,6 @@
 import torch
+import numpy as np
+import cv2
 
 
 def accuracy(y, ypred):
@@ -27,11 +29,11 @@ def isValidModel(model, sample_X):
         print(error)
         return False
 
-def sharpen():
+def sharpen(img: np.array, kernel: np.array, strength: int=1):
     """
     Sharpening an images
     """
-    pass
+    return cv2.filter2D(img.astype(np.uint8), -1, kernel*strength)
 
 def extractSIFT():
     pass
