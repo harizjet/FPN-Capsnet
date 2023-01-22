@@ -35,8 +35,10 @@ def sharpen(img: np.array, kernel: np.array, strength: int=1):
     """
     return cv2.filter2D(img.astype(np.uint8), -1, kernel*strength)
 
-def extractSIFT():
-    pass
+def extractSIFT(img, thres: int=5):
+    sift = cv2.SIFT_create(thres)
+    key_point, feature = sift.detectAndCompute(img.astype('uint8'), None)
+    return key_point, feature
 
 def extractSURF():
     pass
