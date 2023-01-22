@@ -36,11 +36,17 @@ def sharpen(img: np.array, kernel: np.array, strength: int=1):
     return cv2.filter2D(img.astype(np.uint8), -1, kernel*strength)
 
 def extractSIFT(img: np.array, thres: int=5):
+    """
+    Extract SIFT features
+    """
     sift = cv2.SIFT_create(thres)
     key_point, feature = sift.detectAndCompute(img.astype('uint8'), None)
     return key_point, feature
 
 def extractORB(img: np.array, thres: int=5):
+    """
+    Extract ORB features
+    """
     orb = cv2.ORB_create(edgeThreshold=thres)
     key_point, feature = orb.detectAndCompute(img.astype('uint8'), None)
     return key_point, feature
