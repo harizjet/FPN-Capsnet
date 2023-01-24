@@ -39,7 +39,7 @@ def extractSIFT(img: np.array, thres: int=5):
     """
     Extract SIFT features
     """
-    sift = cv2.SIFT_create(thres)
+    sift = cv2.SIFT_create(edgeThreshold=thres)
     key_point, feature = sift.detectAndCompute(img.astype('uint8'), None)
     return key_point, feature
 
