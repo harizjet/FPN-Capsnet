@@ -21,7 +21,7 @@ class Engine(object):
     $ engine = Engine(basedir=PATH, model=model, epochs=10, batch_size=8, learning_rate=1e-4, optimizer=optimizer, criterion=criterion, train_dataset=train_dataset, val_dataset=val_dataset, use_cuda=False))
     $ engine.train()
     """
-    def __init__(self, basedir, model, epochs, batch_size, learning_rate, optimizer, criterion, train_dataset, val_dataset, device=torch.device('cpu')):    
+    def __init__(self, basedir, model, epochs, batch_size, learning_rate, optimizer, criterion, train_dataset, val_dataset=None, lr_scheduler=None, device=torch.device('cpu')):    
         self.basedir = basedir
         self.model = model
 
@@ -29,6 +29,7 @@ class Engine(object):
         self.batch_size = batch_size
         self.learning_rate = learning_rate
         self.optimizer = optimizer
+        self.lr_scheduler = lr_scheduler
         self.criterion = criterion
 
         self.train_dataset = train_dataset
@@ -36,6 +37,8 @@ class Engine(object):
 
         self.foldername = self._getFolderName()
         self.device = device
+
+        self.TIME_NOW = time.time()
 
     def _initLog(self):
         self.logger = logging.getLogger(self.foldername)
@@ -75,8 +78,10 @@ class Engine(object):
             
         return ''.join(filea)
     
-    def _getDataLoader(self):
+    def _getTrainLoader(self):
         self.train_loader = DataLoader(self.train_dataset, batch_size=self.batch_size, shuffle=True)
+
+    def _getValLoader(self):
         self.val_loader = DataLoader(self.val_dataset, batch_size=self.batch_size, shuffle=True)
 
     def _createFolder(self):
@@ -118,69 +123,82 @@ class Engine(object):
     def _saveModel(self):
         torch.save(self.model, os.path.join(self.basedir, self.foldername, 'model.pb'))
     
-    def train(self):
+    def _valid(self, epoch=0):
+        val_acc = []
+        val_loss = []
+        self.model.train(False)
+        for sample in self.val_loader:
+            x, y = sample
+
+            x = x.to(self.device)
+            y = y.to(self.device)
+
+            ypred = self.model(x)
+
+            loss = self.criterion(y, ypred)
+            acc = accuracy(y, ypred)
+
+            val_loss.append(loss.item())
+            val_acc.append(acc)
+
+        self.accuracy.append(np.mean(val_acc))
+        self.logger.info(f'EPOCH: [{epoch:3d},{self.epochs:3d}]   | VAL-ACCURACY: {np.mean(val_acc):.4f}      | VAL-LOSS: {np.mean(val_loss):.4f}   --  {time.time()-self.TIME_NOW:.2f}s')
+    
+    def _trainEpoch(self, epoch=0):
+        running_loss = 0
+        total_loss = 0
+
+        N1 = len(self.train_loader)
+
+        self.model.train(True)
+        for i, sample in enumerate(self.train_loader):
+            x, y = sample
+
+            x = x.to(self.device)
+            y = y.to(self.device)
+
+            ypred =self.model(x)
+
+            loss = self.criterion(y, ypred)
+            self.optimizer.zero_grad()
+            loss.backward()
+            self.optimizer.step()
+
+            running_loss += loss.item()
+            total_loss += loss.item()
+
+            if i % 5 == 4:
+                self.logger.info(f'EPOCH: [{epoch:3d},{self.epochs:3d}]   | MINI-BATCH: [{i + 1:4d},{N1:4d}]   | LOSS: {running_loss / 5:.4f}   --  {time.time()-self.TIME_NOW:.2f}s')
+                running_loss = 0
+
+        self.loss.append(total_loss / N1)
+
+    def train(self, valid=True):
+        if valid != (self.val_dataset is not None):
+            raise Exception("Validation dataset not provided!")
+
         self._createFolder()
         self._initLog()
-        self._getDataLoader()
+        self._getTrainLoader()
+        if valid:
+            self._getValLoader()
         self.accuracy = []
         self.loss = []
 
-        TIME_NOW = time.time()
+        self.TIME_NOW = time.time()
 
         for epoch in range(1, self.epochs+1):
             self.logger.info(f'START EPOCH - {epoch}')
-
-            running_loss = 0
-            total_loss = 0
-
-            N1 = len(self.train_loader)
-
-            self.model.train(True)
-            for i, sample in enumerate(self.train_loader):
-                x, y = sample
-
-                x = x.to(self.device)
-                y = y.to(self.device)
-
-                ypred =self.model(x)
-
-                loss = self.criterion(y, ypred)
-                self.optimizer.zero_grad()
-                loss.backward()
-                self.optimizer.step()
-
-                running_loss += loss.item()
-                total_loss += loss.item()
-
-                if i % 5 == 4:
-                    self.logger.info(f'EPOCH: [{epoch:3d},{self.epochs:3d}]   | MINI-BATCH: [{i + 1:4d},{N1:4d}]   | LOSS: {running_loss / 5:.4f}   --  {time.time()-TIME_NOW:.2f}s')
-                    running_loss = 0
-
-            self.loss.append(total_loss / N1)
-
-            val_acc = []
-            val_loss = []
-            self.model.train(False)
-            for sample in self.val_loader:
-                x, y = sample
-
-                x = x.to(self.device)
-                y = y.to(self.device)
-
-                ypred = self.model(x)
-
-                loss = self.criterion(y, ypred)
-                acc = accuracy(y, ypred)
-
-                val_loss.append(loss.item())
-                val_acc.append(acc)
-
-            self.accuracy.append(np.mean(val_acc))
-            self.logger.info(f'EPOCH: [{epoch:3d},{self.epochs:3d}]   | VAL-ACCURACY: {np.mean(val_acc):.4f}      | VAL-LOSS: {np.mean(val_loss):.4f}   --  {time.time()-TIME_NOW:.2f}s')
-
+            self._trainEpoch(epoch)
+            if valid:
+                self._valid(epoch)
+            if self.lr_scheduler is not None:
+                self.lr_scheduler.step()
+        
         self._saveSummaryModel()
         self._saveConfig()
-        self._saveAccuracy()
+        if valid:
+            self._saveAccuracy()
         self._saveLoss()
         self._saveModel()
         self._stopLog()
