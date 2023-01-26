@@ -97,8 +97,23 @@ class toTensor(object):
     Convert numpy array to Tensor
     Example:
     $ t = torch.rand(1, 1, 28, 28)
-    $ y = transform_toTensor()(t)
+    $ y = toTensor()(t)
     """
 
     def __call__(self, sample):
-        return torch.from_numpy(np.asarray(sample))
+        return torch.from_numpy(np.asarray(sample)).type(torch.uint8)
+
+
+class scale(object):
+    """
+    Scale images
+    Example:
+    $ t = torch.rand(1, 1, 28, 28)
+    $ y = scale()(t)
+    """
+    def __init__(self, mean, std):
+        self.mean = mean
+        self.std = std
+
+    def __call__(self, sample):
+        return (sample-self.mean)/self.std
