@@ -64,6 +64,7 @@ class augmentation(object):
         width_mod = torch.floor((rand_amts[0] * (28 / 4)) + 1).long()
         offset_mod = torch.floor(rand_amts[1] * 2).long()
         offset = ((width_mod // 2) + offset_mod).long()
+        sample = sample / 255 if torch.max(sample) > 1 else sample
         squished_image = Fn.resize(T.ToPILImage()(sample), [28, 28-width_mod], interpolation=InterpolationMode.LANCZOS)
         squished_image = F.pad(Fn.pil_to_tensor(squished_image)[0], (offset, offset_mod+width_mod-offset, 0, 0))
         squished_image = Fn.crop(squished_image, 0, 0, 28, 28)
@@ -99,9 +100,11 @@ class toTensor(object):
     $ t = torch.rand(1, 1, 28, 28)
     $ y = toTensor()(t)
     """
+    def __init__(self, type=torch.uint8):
+        self.type = type
 
     def __call__(self, sample):
-        return torch.from_numpy(np.asarray(sample)).type(torch.uint8)
+        return torch.from_numpy(np.asarray(sample)).type(self.type)
 
 
 class scale(object):
@@ -114,6 +117,7 @@ class scale(object):
     def __init__(self, mean, std):
         self.mean = mean
         self.std = std
+        self.default_float_dtype = torch.get_default_dtype()
 
     def __call__(self, sample):
-        return (sample-self.mean)/self.std
+        return (sample.to(dtype=self.default_float_dtype)-self.mean)/self.std
