@@ -157,7 +157,7 @@ class Engine(object):
             x = x.to(self.device)
             y = y.to(self.device)
 
-            ypred =self.model(x)
+            ypred = self.model(x)
 
             loss = self.criterion(y, ypred)
             self.optimizer.zero_grad()
