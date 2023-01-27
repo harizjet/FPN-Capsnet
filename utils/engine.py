@@ -6,6 +6,7 @@ import sys
 import time
 import re
 import numpy as np 
+import shutil
 
 from utils.utils import accuracy
 
@@ -201,4 +202,91 @@ class Engine(object):
             self._saveAccuracy()
         self._saveLoss()
         self._saveModel()
+        self._stopLog()
+
+
+class TestEngine(object):
+    """
+    Engine to test model
+    Example:
+    $ tengine = TestEngine(basedir=PATH, model=model, dataset=dataset, device=device, model_name="001"))
+    $ tengine.test()
+    """
+    def __init__(self, basedir, model, dataset, device, model_name: str=None):    
+        self.basedir = basedir
+        self.model = model
+        self.dataset = dataset
+
+        self.device = device
+        self.foldername = self._getFolderName() if not model_name else model_name
+
+    def _initLog(self):
+        self.logger = logging.getLogger(self.foldername)
+        self.logger.setLevel(logging.DEBUG)
+        self.logger.handlers = []
+
+        formatter = logging.Formatter('[%(asctime)s] %(levelname)s :: %(message)s', datefmt='%a, %d %b %Y %H:%M:%S')
+
+        file_handler = logging.FileHandler(os.path.join(self.basedir, self.foldername, 'testing.log'))
+        file_handler.setFormatter(formatter)
+        self.logger.addHandler(file_handler)
+
+        stdout_handler = logging.StreamHandler(sys.stdout)
+        stdout_handler.setFormatter(formatter)
+        self.logger.addHandler(stdout_handler)
+
+    def _stopLog(self):
+        self.logger.disabled = True
+    
+    def _getFolderName(self):
+        tmp = [False] * 998
+        for file in os.listdir(self.basedir):
+            if not re.search('^\d{3}$', file):
+                continue
+            tmp[int(file)-1] = True
+
+        filei = None
+        for i in range(998):
+            if not tmp[i]:
+                filei = i + 1
+                break
+
+        filea = [0] * 3
+        for i in range(2, -1, -1):
+            filea[i] = str(filei % 10)
+            filei //= 10
+            
+        return ''.join(filea)
+    
+    def _getTestLoader(self):
+        self.test_loader = DataLoader(self.dataset, batch_size=len(self.dataset)//100)
+
+    def _createFolder(self):
+        dir = os.path.join(self.basedir, self.foldername)
+        if os.path.exists(dir):
+            shutil.rmtree(dir)
+        os.makedirs(dir)
+
+    def _savePrediction(self):
+        with open(os.path.join(self.basedir, self.foldername, "predictions.csv"), 'w') as f:
+            writer = csv.writer(f, delimiter=',', lineterminator='\n')
+            writer.writerow(['ImageId', 'Label'])
+            for i in range(len(self.y_hat)):
+                writer.writerow([i+1, int(self.y_hat[i])])
+
+    def test(self):
+        self._createFolder()
+        self._initLog()
+        self._getTestLoader()
+        self.TIME_NOW = time.time()
+
+        self.y_hat = []
+        for i, x in enumerate(self.test_loader):
+            ypred = self.model(x.to(self.device))
+            predict_class = torch.argmax(ypred.cpu(), dim=-1)
+            self.y_hat = np.concatenate((self.y_hat, predict_class))
+
+            self.logger.info(f'BATCH: [{i + 1:4d},{100:4d}]   --  {time.time()-self.TIME_NOW:.2f}s')
+
+        self._savePrediction()
         self._stopLog()
