@@ -28,6 +28,7 @@ class augmentation(object):
         self.target_width_slice = slice(max(0, -w_shift), -w_shift + width)
         
     def _shift(self, sample):
+        rand_amts = torch.min(torch.abs(torch.randn([2]) * 0.33), torch.tensor(0.999))
         nonzero_x_cols = (torch.sum(torch.from_numpy(sample.numpy()), dim=0) > 0).nonzero()
         nonzero_y_cols = (torch.sum(torch.from_numpy(sample.numpy()), dim=1) > 0).nonzero()
         left_margin = torch.min(nonzero_x_cols)
@@ -36,7 +37,6 @@ class augmentation(object):
         bot_margin = 28 - torch.max(nonzero_y_cols) - 1
         rand_dirs = torch.rand([2])
         dir_idxs = torch.floor(rand_dirs * 2).long()
-        rand_amts = torch.min(torch.abs(torch.randn([2]) * 0.33), torch.tensor(0.999))
         x_amts = [torch.floor(-1 * rand_amts[0] * left_margin), torch.floor(rand_amts[0] * (1 + right_margin))]
         y_amts = [torch.floor(-1 * rand_amts[1] * top_margin), torch.floor(rand_amts[1] * (1 + bot_margin))]
         x_amt = torch.gather(torch.tensor(x_amts), index=dir_idxs[1], dim=0)
@@ -52,11 +52,10 @@ class augmentation(object):
         return shifted_image.float()
     
     def _rotate(self, sample):
-        rand_amts = torch.max(torch.min(torch.randn(2) * 0.33, torch.tensor(0.9999)), torch.tensor(-0.9999))
+        rand_amts = torch.max(torch.min(torch.randn(1) * 0.33, torch.tensor(0.9999)), torch.tensor(-0.9999))
         angle = rand_amts[0] * 30
         rot_mat = cv2.getRotationMatrix2D((28/2, 28/2), int(angle), 1.0)
-        rotated = torch.from_numpy(cv2.warpAffine(sample.numpy(), rot_mat, (28, 28)))
-        rotated_image = sample if rand_amts[1] > 0 else rotated
+        rotated_image = torch.from_numpy(cv2.warpAffine(sample.numpy(), rot_mat, (28, 28)))
         return rotated_image.float()
 
     def _squish(self, sample):
@@ -80,10 +79,15 @@ class augmentation(object):
         return patch_image.float()
 
     def _individual(self, sample):
-        sample = self._rotate(sample)
-        sample = self._shift(sample)
-        sample = self._squish(sample)
-        sample = self._erase(sample)
+        rand_amts = torch.rand([4])
+        if rand_amts[0] > 0:
+            sample = self._rotate(sample)
+        if rand_amts[1] > 0:
+            sample = self._shift(sample)
+        if rand_amts[2] > 0:
+            sample = self._squish(sample)
+        if rand_amts[3] > 0:
+            sample = self._erase(sample)
         return sample.float()
         
     def __call__(self, sample):
