@@ -19,7 +19,7 @@ python main.py \
     --model fpn-capsnet \
     --device cuda \
     --criterion capsule-loss \
-    --lr_scheduler  step \
+    --lr_scheduler step \
     --lr_decay 0.98 \
     --lr_decay_step 8 \
     --epochs 1 \

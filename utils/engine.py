@@ -221,7 +221,7 @@ class TestEngine(object):
         self.foldername = self._getFolderName() if not model_name else model_name
 
     def _initLog(self):
-        self.logger = logging.getLogger(self.foldername)
+        self.logger = logging.getLogger(self.foldername + "_log")
         self.logger.setLevel(logging.DEBUG)
         self.logger.handlers = []
 

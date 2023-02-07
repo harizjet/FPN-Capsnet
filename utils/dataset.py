@@ -11,24 +11,28 @@ class MNISTdataset(Dataset):
     Dataset for mnist
     """
     data_dir = "../data/mnist"
-    train_file = os.path.join(data_dir, "train.csv")
-    test_file = os.path.join(data_dir, "test.csv")
 
-    def __init__(self, isTrain, transform_x=None, transform_y=None):
+    def __init__(self, isTrain, transform_x=None, transform_y=None, data_dir=None):
         np.random.seed(0)
+
+        if data_dir is not None:
+            self.data_dir = data_dir
+
+        train_file = os.path.join(self.data_dir, "train.csv")
+        test_file = os.path.join(self.data_dir, "test.csv")
 
         self.isTrain = isTrain
 
         if self.isTrain:
-            df = pd.read_csv(self.train_file)
+            df = pd.read_csv(train_file)
             self.y, self.x = df.iloc[:,0].to_numpy(), df.iloc[:,1:].to_numpy()
         else:
-            df = pd.read_csv(self.test_file)
+            df = pd.read_csv(test_file)
             self.x = df.to_numpy()
 
         self.transform_x = transform_x
         self.transform_y = transform_y
-    
+        
     def __len__(self):
         return len(self.x)
 
