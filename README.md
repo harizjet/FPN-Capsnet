@@ -2,6 +2,7 @@
 
 Combination of Feature Pyramid Network (FPN) & Capsule Network (Capsnet), applied on MNIST dataset.
 
+<img src="./src/image/overview.png"  width="780">
 
 <!-- GETTING STARTED -->
 ## Getting Started
